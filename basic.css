@@ -1,19 +1,30 @@
+@media only screen and (min-width: 600px){
+  body {
+    grid-template-columns: 120px 1fr;
+    grid-template-areas: "sidebar content"
+                         "footer footer";
+  }
+}
 body {
   display: grid;
+  min-height: 100vh;
+  min-width: 100%
   grid-template-rows: 1fr 90px;
-  grid-template-columns: 40px 1fr;
-  grid-template-areas: "sidebar content"
-                       "footer footer";
+  grid-template-areas: "content"
+                       "footer";
 }
 
 .main {
   grid-area: content;
+  background-color: black;
 }
 
 .footer {
   grid-area: footer;
+  background-color: red;
 }
 
 .aside {
   grid-area: sidebar;
+  background-color: blue;
 }
